@@ -1,0 +1,47 @@
+{
+	"name": "discord-rpc",
+	"displayName": "Discord Rich Presence",
+	"description": "A simple, opinionated Discord rich presence extension",
+	"version": "0.0.1",
+	"main": "./dist/extension.js",
+	"scripts": {
+		"vscode:prepublish": "yarn run package",
+		"watch": "npm-run-all -p watch:*",
+		"watch:esbuild": "node esbuild.js --watch",
+		"watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
+		"package": "yarn run check-types && node esbuild.js --production",
+		"check-types": "tsc --noEmit"
+	},
+	"devDependencies": {
+		"@types/mocha": "^10.0.10",
+		"@types/node": "^20.17.24",
+		"@types/vscode": "^1.98.0",
+		"esbuild": "^0.25.0",
+		"npm-run-all": "^4.1.5",
+		"tsx": "^4.19.3",
+		"typescript": "^5.8.2"
+	},
+	"dependencies": {
+		"minimal-discord-rpc": "^1.0.1"
+	},
+	"packageManager": "yarn@4.7.0",
+	"engines": {
+		"vscode": "^1.98.0"
+	},
+	"categories": ["Other"],
+	"activationEvents": ["onStartupFinished"],
+	"contributes": {
+		"commands": [
+			{
+				"command": "discord-rpc.enable",
+				"title": "Enable",
+				"category": "Discord Rich Presence"
+			},
+			{
+				"command": "discord-rpc.disable",
+				"title": "Disable",
+				"category": "Discord Rich Presence"
+			}
+		]
+	}
+}
