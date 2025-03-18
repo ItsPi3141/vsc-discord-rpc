@@ -210,10 +210,10 @@
 			const oklch2rgb = (lch) => srgbLinear2rgb(xyz2rgbLinear(oklab2xyz(oklch2oklab(lch))));
 			const rgb2oklch = (rgb) => oklab2oklch(xyz2oklab(rgbLinear2xyz(rgb2srgbLinear(rgb))));
 
-			const bgL = 0.2834;
-			const bgC = 0.0192;
-			const acL = 0.6666;
-			const acC = 0.1103;
+			const bgL = 0.25;
+			const bgC = 0.0096;
+			const acL = 0.7047;
+			const acC = 0.1169;
 
 			const createPalette = (rgb) => {
 				const inputOklch = rgb2oklch(rgb);
