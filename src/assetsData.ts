@@ -9,6 +9,6 @@ interface LanguageAsset {
 export const assets: Record<string, LanguageAsset> = {
 	js: {
 		custom: [],
-		default: "js",
+		default: "javascript",
 	},
 };
