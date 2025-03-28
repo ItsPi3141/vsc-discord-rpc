@@ -17,12 +17,17 @@ export const getAsset = ({
 	if (!ext) return undefined;
 
 	const lang = assets[ext];
-	for (const custom of lang.custom) {
-		if (custom.matcher instanceof RegExp && custom.matcher.test(fileName))
-			return `${basePath}${custom.asset}.png`;
+	if (lang.custom) {
+		for (const custom of lang.custom) {
+			if (custom.matcher instanceof RegExp && custom.matcher.test(fileName))
+				return `${basePath}${custom.asset}.png`;
 
-		if (typeof custom.matcher === "string" && fileName.includes(custom.matcher))
-			return `${basePath}${custom.asset}.png`;
+			if (
+				typeof custom.matcher === "string" &&
+				fileName.includes(custom.matcher)
+			)
+				return `${basePath}${custom.asset}.png`;
+		}
 	}
 	return `${basePath}${lang.default}.png`;
 };
