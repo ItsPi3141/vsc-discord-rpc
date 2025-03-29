@@ -17,6 +17,7 @@ export const getAsset = ({
 	if (!ext) return undefined;
 
 	const lang = assets[ext];
+	if (!lang) return `${basePath}text.png`;
 	if (lang.custom) {
 		for (const custom of lang.custom) {
 			if (custom.matcher instanceof RegExp && custom.matcher.test(fileName))
