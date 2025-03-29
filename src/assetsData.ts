@@ -46,20 +46,35 @@ const _assets: Record<string, LanguageAsset> = {
 	fs: {
 		default: "fsharp",
 	},
+	git: {
+		default: "git",
+	},
 	go: {
 		default: "go",
 	},
-	hs: {
-		default: "haskell",
-	},
 	hc: {
 		default: "holyc",
+	},
+	hgignore: {
+		default: "mercurial",
+	},
+	hs: {
+		default: "haskell",
 	},
 	html: {
 		default: "html",
 	},
 	idr: {
 		default: "idris",
+	},
+	ini: {
+		custom: [
+			{
+				matcher: "mercurial.ini",
+				asset: "mercurial",
+			},
+		],
+		default: "text",
 	},
 	java: {
 		default: "java",
@@ -274,6 +289,10 @@ const _assets: Record<string, LanguageAsset> = {
 				asset: "fly",
 			},
 			{
+				matcher: "gitlab-ci.y",
+				asset: "gitlab",
+			},
+			{
 				matcher: "netlify.y",
 				asset: "netlify",
 			},
@@ -284,6 +303,10 @@ const _assets: Record<string, LanguageAsset> = {
 			{
 				matcher: ".yarnrc.y",
 				asset: "yarn",
+			},
+			{
+				matcher: /\.github\/workflows\/.+\.y/,
+				asset: "github",
 			},
 		],
 		default: "yaml",
@@ -307,6 +330,17 @@ const aliases: Record<string, string[]> = {
 	ex: ["exs"],
 	erl: ["hrl"],
 	fs: ["fsi", "fsx", "fsscript"],
+	git: [
+		"gitattributes",
+		"gitconfig",
+		"gitignore",
+		"gitinclude",
+		"gitkeep",
+		"gitmessage",
+		"gitmodules",
+		"gitpreserve",
+		"keep",
+	],
 	hs: ["lhs"],
 	idr: ["lidr"],
 	js: ["cjs", "mjs"],
