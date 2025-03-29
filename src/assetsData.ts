@@ -116,6 +116,10 @@ const _assets: Record<string, LanguageAsset> = {
 				asset: "npm",
 			},
 			{
+				matcher: "railway.json",
+				asset: "railway",
+			},
+			{
 				matcher: "vercel.json",
 				asset: "vercel",
 			},
@@ -214,6 +218,10 @@ const _assets: Record<string, LanguageAsset> = {
 			{
 				matcher: "netlify.toml",
 				asset: "netlify",
+			},
+			{
+				matcher: "railway.toml",
+				asset: "railway",
 			},
 		],
 		default: "toml",
