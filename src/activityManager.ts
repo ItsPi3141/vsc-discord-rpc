@@ -46,11 +46,16 @@ const setIdle = () => {
 	activityData.details = undefined;
 	throttledSetActivity();
 };
-const setFile = (fileName: string, line: number, col: number) => {
+const setFile = (
+	filePath: string,
+	fileName: string,
+	line: number,
+	col: number,
+) => {
 	Object.assign(activityData, {
 		details: `${fileName}:${line}:${col}`,
 		assets: {
-			large_image: getAsset({ fileName }),
+			large_image: getAsset({ fileName, filePath }),
 			small_image: getAsset({ name: "vscode" }),
 		},
 	});
@@ -78,6 +83,7 @@ vscode.window.onDidChangeActiveTextEditor((editor) => {
 	// Ignore notebook cells, they have their own events
 	if (editor.document.uri.scheme === "vscode-notebook-cell") return;
 	setFile(
+		doc.fileName.replaceAll("\\", "/") || "Untitled",
 		doc.fileName.split("/").pop()?.split("\\").pop() || "Untitled",
 		editor.selection.start.line + 1,
 		editor.selection.start.character + 1,
@@ -91,6 +97,7 @@ vscode.window.onDidChangeActiveNotebookEditor((editor) => {
 vscode.window.onDidChangeTextEditorSelection((editor) => {
 	const doc = editor?.textEditor.document;
 	setFile(
+		doc.fileName.replaceAll("\\", "/") || "Untitled",
 		doc.fileName.split("/").pop()?.split("\\").pop() || "Untitled",
 		editor.textEditor.selection.start.line + 1,
 		editor.textEditor.selection.start.character + 1,
