@@ -7,6 +7,18 @@ interface LanguageAsset {
 }
 
 const _assets: Record<string, LanguageAsset> = {
+	aep: {
+		default: "adobe_afterfx",
+	},
+	ai: {
+		default: "adobe_illustrator",
+	},
+	apk: {
+		default: "android",
+	},
+	bp: {
+		default: "android",
+	},
 	c: {
 		default: "c",
 	},
@@ -40,6 +52,9 @@ const _assets: Record<string, LanguageAsset> = {
 	erl: {
 		default: "erlang",
 	},
+	fla: {
+		default: "adobe_animate",
+	},
 	fr: {
 		default: "frege",
 	},
@@ -66,6 +81,9 @@ const _assets: Record<string, LanguageAsset> = {
 	},
 	idr: {
 		default: "idris",
+	},
+	indd: {
+		default: "adobe_indesign",
 	},
 	ini: {
 		custom: [
@@ -98,12 +116,28 @@ const _assets: Record<string, LanguageAsset> = {
 				asset: "vercel",
 			},
 			{
+				matcher: "tailwind.",
+				asset: "tailwind",
+			},
+			{
+				matcher: /uno(css)?\.config\./,
+				asset: "uno",
+			},
+			{
 				matcher: "vite.config.",
 				asset: "vite",
 			},
 			{
+				matcher: "vue.config.",
+				asset: "vue",
+			},
+			{
 				matcher: "webpack.",
 				asset: "webpack",
+			},
+			{
+				matcher: "windi.config.",
+				asset: "windi",
 			},
 			{
 				matcher: "yarn.config.",
@@ -137,6 +171,10 @@ const _assets: Record<string, LanguageAsset> = {
 			{
 				matcher: "vercel.json",
 				asset: "vercel",
+			},
+			{
+				matcher: "windi.config.",
+				asset: "windi",
 			},
 		],
 		default: "json",
@@ -197,6 +235,9 @@ const _assets: Record<string, LanguageAsset> = {
 	php: {
 		default: "php",
 	},
+	psd: {
+		default: "adobe_photoshop",
+	},
 	ps1: {
 		default: "powershell",
 	},
@@ -217,6 +258,9 @@ const _assets: Record<string, LanguageAsset> = {
 	},
 	rs: {
 		default: "rust",
+	},
+	sass: {
+		default: "sass",
 	},
 	scala: {
 		default: "scala",
@@ -256,12 +300,28 @@ const _assets: Record<string, LanguageAsset> = {
 				asset: "vercel",
 			},
 			{
+				matcher: "tailwind.",
+				asset: "tailwind",
+			},
+			{
+				matcher: /uno(css)?\.config\./,
+				asset: "uno",
+			},
+			{
 				matcher: "vite.config.",
 				asset: "vite",
 			},
 			{
+				matcher: "vue.config.",
+				asset: "vue",
+			},
+			{
 				matcher: "webpack.",
 				asset: "webpack",
+			},
+			{
+				matcher: "windi.config.",
+				asset: "windi",
 			},
 			{
 				matcher: "yarn.config.",
@@ -276,11 +336,23 @@ const _assets: Record<string, LanguageAsset> = {
 	vercelignore: {
 		default: "vercel",
 	},
+	vue: {
+		default: "vue",
+	},
 	wat: {
 		default: "wasm",
 	},
+	xd: {
+		default: "adobe_xd",
+	},
 	xml: {
 		default: "xml",
+		custom: [
+			{
+				matcher: "androidmanifest.xml",
+				asset: "android",
+			},
+		],
 	},
 	yaml: {
 		custom: [
@@ -311,13 +383,7 @@ const _assets: Record<string, LanguageAsset> = {
 		],
 		default: "yaml",
 	},
-	yarnclean: {
-		default: "yarn",
-	},
 	yarnrc: {
-		default: "yarn",
-	},
-	"yarn-integrity": {
 		default: "yarn",
 	},
 	zig: {
@@ -325,10 +391,12 @@ const _assets: Record<string, LanguageAsset> = {
 	},
 };
 const aliases: Record<string, string[]> = {
+	apk: ["apks", "smali", "dex"],
 	c: ["a", "h", "o"],
 	clj: ["cljc", "cljd", "cljr", "cljs", "edn"],
 	ex: ["exs"],
 	erl: ["hrl"],
+	fla: ["apr", "as", "asc", "jsfl", "swf", "xfl"],
 	fs: ["fsi", "fsx", "fsscript"],
 	git: [
 		"gitattributes",
@@ -342,6 +410,7 @@ const aliases: Record<string, string[]> = {
 		"keep",
 	],
 	hs: ["lhs"],
+	indd: ["indb", "indl"],
 	idr: ["lidr"],
 	js: ["cjs", "mjs"],
 	json: ["jsonc"],
@@ -350,15 +419,20 @@ const aliases: Record<string, string[]> = {
 	md: ["markdown", "mdx"],
 	ml: ["cmt", "cmti", "codoc", "mli", "odoc"],
 	nim: ["nims", "nimble"],
+	psd: ["psb"],
 	ps1: ["psd1", "psm1"],
 	py: ["pyc", "pyd", "pyi", "pyw", "pyz"],
 	rb: ["ru"],
 	red: ["reds"],
 	rs: ["rlib"],
+	sass: ["scss"],
 	scala: ["sc"],
+	ts: ["cts"],
 	v: ["vsh"],
+	vue: ["vuerc"],
 	wat: ["wasm"],
 	yaml: ["yml"],
+	yarnrc: ["yarnclean", "yarn-integrity"],
 	zig: ["zigr", "zir", "zon"],
 };
 for (const alias in aliases) {
