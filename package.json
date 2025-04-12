@@ -2,7 +2,7 @@
 	"name": "discord-rpc",
 	"displayName": "Discord RPC",
 	"description": "A simple, opinionated Discord rich presence extension",
-	"icon": "assets/icons/logo2.png",
+	"icon": "icon.png",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/ItsPi3141/vsc-discord-rpc"
