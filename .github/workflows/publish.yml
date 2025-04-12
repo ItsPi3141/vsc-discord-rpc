@@ -1,0 +1,42 @@
+name: Publish Extension
+
+on: workflow_dispatch
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: |
+          corepack enable
+          yarn install
+
+      - name: Get version
+        id: version
+        uses: martinbeentjes/npm-get-version-action@v1.3.1
+
+      - name: Build extension
+        run: |
+          yarn package
+
+      - name: Publish to Visual Studio Marketplace
+        uses: HaaLeo/publish-vscode-extension@v2
+        id: publishToMarketplace
+        with:
+          pat: ${{ secrets.VS_MARKETPLACE_TOKEN }}
+          registryUrl: https://marketplace.visualstudio.com
+
+      - name: Upload to releases
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{steps.version.outputs.current-version}}
+          files: ${{ steps.publishToMarketplace.outputs.vsixPath }}
+          make_latest: true
