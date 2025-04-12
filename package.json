@@ -37,19 +37,5 @@
 		"vscode": "^1.99.1"
 	},
 	"categories": ["Other"],
-	"activationEvents": ["onStartupFinished"],
-	"contributes": {
-		"commands": [
-			{
-				"command": "discord-rpc.enable",
-				"title": "Enable",
-				"category": "Discord Rich Presence"
-			},
-			{
-				"command": "discord-rpc.disable",
-				"title": "Disable",
-				"category": "Discord Rich Presence"
-			}
-		]
-	}
+	"activationEvents": ["onStartupFinished"]
 }
