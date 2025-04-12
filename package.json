@@ -1,6 +1,6 @@
 {
 	"name": "discord-rpc",
-	"displayName": "Discord Rich Presence",
+	"displayName": "Discord RPC",
 	"description": "A simple, opinionated Discord rich presence extension",
 	"repository": {
 		"type": "git",
