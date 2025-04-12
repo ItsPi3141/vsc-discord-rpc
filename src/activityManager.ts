@@ -61,6 +61,16 @@ const setFile = (
 	});
 	throttledSetActivity();
 };
+const setNotebook = (cell: number, totalCells: number) => {
+	Object.assign(activityData, {
+		details: `Cell ${cell} of ${totalCells}`,
+		assets: {
+			large_image: getAsset({ name: "python" }),
+			small_image: getAsset({ name: "vscode" }),
+		},
+	});
+	throttledSetActivity();
+};
 
 export const client = new Client({
 	clientId: "1350606494349131836",
@@ -79,27 +89,31 @@ client.login();
 
 vscode.window.onDidChangeActiveTextEditor((editor) => {
 	if (!editor) return;
-	const doc = editor?.document;
+	const { document, selection } = editor;
 	// Ignore notebook cells, they have their own events
 	if (editor.document.uri.scheme === "vscode-notebook-cell") return;
 	setFile(
-		doc.fileName.replaceAll("\\", "/") || "Untitled",
-		doc.fileName.split("/").pop()?.split("\\").pop() || "Untitled",
-		editor.selection.start.line + 1,
-		editor.selection.start.character + 1,
+		document.fileName.replaceAll("\\", "/") || "Untitled",
+		document.fileName.split("/").pop()?.split("\\").pop() || "Untitled",
+		selection.start.line + 1,
+		selection.start.character + 1,
+	);
+});
+vscode.window.onDidChangeTextEditorSelection((event) => {
+	const { document, selection } = event.textEditor;
+	setFile(
+		document.fileName.replaceAll("\\", "/") || "Untitled",
+		document.fileName.split("/").pop()?.split("\\").pop() || "Untitled",
+		selection.start.line + 1,
+		selection.start.character + 1,
 	);
 });
 
 vscode.window.onDidChangeActiveNotebookEditor((editor) => {
-	const doc = editor?.notebook;
+	if (!editor) return;
+	setNotebook(editor.selection.start + 1, editor.notebook.cellCount);
 });
-
-vscode.window.onDidChangeTextEditorSelection((editor) => {
-	const doc = editor?.textEditor.document;
-	setFile(
-		doc.fileName.replaceAll("\\", "/") || "Untitled",
-		doc.fileName.split("/").pop()?.split("\\").pop() || "Untitled",
-		editor.textEditor.selection.start.line + 1,
-		editor.textEditor.selection.start.character + 1,
-	);
+vscode.window.onDidChangeNotebookEditorSelection((event) => {
+	const notebook = event.notebookEditor;
+	setNotebook(notebook.selection.start + 1, notebook.notebook.cellCount);
 });
