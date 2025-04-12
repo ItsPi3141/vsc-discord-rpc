@@ -14,22 +14,26 @@
 	},
 	"devDependencies": {
 		"@types/mocha": "^10.0.10",
-		"@types/node": "^20.17.24",
-		"@types/vscode": "^1.98.0",
-		"esbuild": "^0.25.0",
+		"@types/node": "^20.17.30",
+		"@types/vscode": "^1.99.1",
+		"esbuild": "^0.25.2",
 		"npm-run-all": "^4.1.5",
 		"tsx": "^4.19.3",
-		"typescript": "^5.8.2"
+		"typescript": "^5.8.3"
 	},
 	"dependencies": {
-		"minimal-discord-rpc": "^1.0.1"
+		"minimal-discord-rpc": "^1.0.2"
 	},
 	"packageManager": "yarn@4.7.0",
 	"engines": {
 		"vscode": "^1.98.0"
 	},
-	"categories": ["Other"],
-	"activationEvents": ["onStartupFinished"],
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onStartupFinished"
+	],
 	"contributes": {
 		"commands": [
 			{
