@@ -6,6 +6,7 @@
 		"type": "git",
 		"url": "https://github.com/ItsPi3141/vsc-discord-rpc"
 	},
+	"license": "AGPL-3.0",
 	"version": "0.0.1",
 	"main": "./dist/extension.js",
 	"scripts": {
@@ -34,12 +35,8 @@
 	"engines": {
 		"vscode": "^1.99.1"
 	},
-	"categories": [
-		"Other"
-	],
-	"activationEvents": [
-		"onStartupFinished"
-	],
+	"categories": ["Other"],
+	"activationEvents": ["onStartupFinished"],
 	"contributes": {
 		"commands": [
 			{
