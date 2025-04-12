@@ -195,6 +195,10 @@ const _assets: Record<string, LanguageAsset> = {
 				asset: "bun",
 			},
 			{
+				matcher: "Cargo.lock",
+				asset: "rust",
+			},
+			{
 				matcher: "deno.lock",
 				asset: "deno",
 			},
@@ -270,6 +274,10 @@ const _assets: Record<string, LanguageAsset> = {
 	},
 	toml: {
 		custom: [
+			{
+				matcher: "Cargo.toml",
+				asset: "rust",
+			},
 			{
 				matcher: "fly.toml",
 				asset: "fly",
