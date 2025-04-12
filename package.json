@@ -7,6 +7,7 @@
 		"url": "https://github.com/ItsPi3141/vsc-discord-rpc"
 	},
 	"license": "AGPL-3.0",
+	"publisher": "ItsPi3141",
 	"version": "0.0.1",
 	"main": "./dist/extension.js",
 	"scripts": {
