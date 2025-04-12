@@ -8,7 +8,7 @@
 	},
 	"license": "AGPL-3.0",
 	"publisher": "ItsPi3141",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"main": "./dist/extension.js",
 	"scripts": {
 		"vscode:prepublish": "yarn run build",
