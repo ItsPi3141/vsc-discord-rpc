@@ -24,10 +24,12 @@ interface Activity {
 
 const throttleTime = 10000; // 10 seconds
 let lastActivityChangeTime = 0;
+let setActivityTimer: NodeJS.Timeout;
 const throttledSetActivity = () => {
 	const now = Date.now();
 	if (now - lastActivityChangeTime < throttleTime) {
-		setTimeout(
+		clearTimeout(setActivityTimer);
+		setActivityTimer = setTimeout(
 			throttledSetActivity,
 			throttleTime + 250 - (now - lastActivityChangeTime),
 		);
