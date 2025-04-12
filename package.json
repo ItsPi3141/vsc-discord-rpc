@@ -37,6 +37,12 @@
 	"engines": {
 		"vscode": "^1.99.1"
 	},
-	"categories": ["Other"],
+	"keywords": ["discord", "rich", "presence", "rpc", "status"],
+	"categories": ["Visualization", "Other"],
+	"extensionKind": ["ui", "workspace"],
+	"galleryBanner": {
+		"color": "#5865F2",
+		"theme": "dark"
+	},
 	"activationEvents": ["onStartupFinished"]
 }
