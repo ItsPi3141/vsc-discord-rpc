@@ -7,7 +7,7 @@
 		"type": "git",
 		"url": "https://github.com/ItsPi3141/vsc-discord-rpc"
 	},
-	"license": "AGPL-3.0",
+	"license": "MIT",
 	"publisher": "ItsPi3141",
 	"version": "0.1.0",
 	"main": "./dist/extension.js",
@@ -35,28 +35,14 @@
 	},
 	"packageManager": "yarn@4.9.1",
 	"engines": {
-		"vscode": "^1.99.1"
+		"vscode": "^1.100.0"
 	},
-	"keywords": [
-		"discord",
-		"rich",
-		"presence",
-		"rpc",
-		"status"
-	],
-	"categories": [
-		"Visualization",
-		"Other"
-	],
-	"extensionKind": [
-		"ui",
-		"workspace"
-	],
+	"keywords": ["discord", "rich", "presence", "rpc", "status"],
+	"categories": ["Visualization", "Other"],
+	"extensionKind": ["ui", "workspace"],
 	"galleryBanner": {
 		"color": "#5865F2",
 		"theme": "dark"
 	},
-	"activationEvents": [
-		"onStartupFinished"
-	]
+	"activationEvents": ["onStartupFinished"]
 }
