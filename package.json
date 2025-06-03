@@ -22,27 +22,41 @@
 	},
 	"devDependencies": {
 		"@types/mocha": "^10.0.10",
-		"@types/node": "^20.17.30",
-		"@types/vscode": "^1.99.1",
-		"@vscode/vsce": "^3.3.2",
-		"esbuild": "^0.25.2",
+		"@types/node": "^22.15.29",
+		"@types/vscode": "^1.100.0",
+		"@vscode/vsce": "^3.4.2",
+		"esbuild": "^0.25.5",
 		"npm-run-all": "^4.1.5",
-		"tsx": "^4.19.3",
+		"tsx": "^4.19.4",
 		"typescript": "^5.8.3"
 	},
 	"dependencies": {
-		"minimal-discord-rpc": "^1.0.2"
+		"minimal-discord-rpc": "^1.0.4"
 	},
-	"packageManager": "yarn@4.7.0",
+	"packageManager": "yarn@4.9.1",
 	"engines": {
 		"vscode": "^1.99.1"
 	},
-	"keywords": ["discord", "rich", "presence", "rpc", "status"],
-	"categories": ["Visualization", "Other"],
-	"extensionKind": ["ui", "workspace"],
+	"keywords": [
+		"discord",
+		"rich",
+		"presence",
+		"rpc",
+		"status"
+	],
+	"categories": [
+		"Visualization",
+		"Other"
+	],
+	"extensionKind": [
+		"ui",
+		"workspace"
+	],
 	"galleryBanner": {
 		"color": "#5865F2",
 		"theme": "dark"
 	},
-	"activationEvents": ["onStartupFinished"]
+	"activationEvents": [
+		"onStartupFinished"
+	]
 }
