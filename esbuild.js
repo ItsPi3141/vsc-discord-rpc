@@ -1,4 +1,5 @@
 const esbuild = require("esbuild");
+const fs = require("node:fs");
 
 const production = process.argv.includes("--production");
 const watch = process.argv.includes("--watch");
@@ -44,6 +45,13 @@ async function main() {
   } else {
     await ctx.rebuild();
     await ctx.dispose();
+  }
+
+  if (production) {
+    let readme = fs.readFileSync("README.md", "utf-8");
+    readme = readme.replace(/^[^]+----/, "# Discord RPC");
+    console.log(readme);
+    fs.writeFileSync("README.md", readme);
   }
 }
 
