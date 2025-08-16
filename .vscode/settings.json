@@ -1,7 +1,7 @@
 {
-	"search.exclude": {
-		"out": true,
-		"dist": true
-	},
-	"typescript.tsc.autoDetect": "off"
+  "search.exclude": {
+    "out": true,
+    "dist": true
+  },
+  "typescript.tsc.autoDetect": "off"
 }

@@ -1,11 +1,11 @@
 {
-	"compilerOptions": {
-		"lib": ["ES2022"],
-		"module": "Node16",
-		"noImplicitReturns": true,
-		"rootDir": "src",
-		"sourceMap": true,
-		"strict": true,
-		"target": "ES2022"
-	}
+  "compilerOptions": {
+    "lib": ["ES2022"],
+    "module": "Node16",
+    "noImplicitReturns": true,
+    "rootDir": "src",
+    "sourceMap": true,
+    "strict": true,
+    "target": "ES2022"
+  }
 }

@@ -10,15 +10,18 @@
 ----
 
 ## ✨ Features
+
 - Displays your current file name and cursor position (`:ln:col`)
 - Simple monochrome-style icons
 
 ## 🪄 Preview
 
 ### Discord
+
 <picture><img width="449" height="177" src="https://github.com/user-attachments/assets/46f4af31-dffc-498d-9b56-1671a2739cf3" /></picture>
 
 ### Icons
+
 _The following are just sample icons, the extension also includes support for other file types/programming languages other than those shown below_  
 
 <picture><img width="96" src="https://raw.githubusercontent.com/ItsPi3141/vsc-discord-rpc/refs/heads/main/assets/icons/vscode.png" /></picture>
@@ -50,12 +53,15 @@ _The following are just sample icons, the extension also includes support for ot
 ## 📫 Contributing
 
 ### Icon request
+
 If you would like the extension to support a file format or programming language that it currently does not support, please open an issue in the [GitHub repository](https://github.com/ItsPi3141/vsc-discord-rpc/issues).
 
 If possible, please include link(s) to resources relevant to your request (e.g. programming language's homepage/documentation, service's homepage)
 
 ### Detection error
-If a file type is incorrectly displayed, please [open an issue](https://github.com/ItsPi3141/vsc-discord-rpc/issues) or [create a pull request](https://github.com/ItsPi3141/vsc-discord-rpc/pulls). 
+
+If a file type is incorrectly displayed, please [open an issue](https://github.com/ItsPi3141/vsc-discord-rpc/issues) or [create a pull request](https://github.com/ItsPi3141/vsc-discord-rpc/pulls).
 
 ## 🔗 Links
+
 [Source code](https://github.com/ItsPi3141/vsc-discord-rpc)
