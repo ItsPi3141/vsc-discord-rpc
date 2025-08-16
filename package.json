@@ -9,7 +9,7 @@
   },
   "license": "MIT",
   "publisher": "ItsPi3141",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "./dist/extension.js",
   "scripts": {
     "vscode:prepublish": "yarn run build",
