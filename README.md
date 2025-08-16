@@ -46,3 +46,16 @@ _The following are just sample icons, the extension also includes support for ot
 <picture><img width="96" src="https://raw.githubusercontent.com/ItsPi3141/vsc-discord-rpc/refs/heads/main/assets/icons/webpack.png" /></picture>
 <picture><img width="96" src="https://raw.githubusercontent.com/ItsPi3141/vsc-discord-rpc/refs/heads/main/assets/icons/netlify.png" /></picture>
 <picture><img width="96" src="https://raw.githubusercontent.com/ItsPi3141/vsc-discord-rpc/refs/heads/main/assets/icons/flyio.png" /></picture>
+
+## 📫 Contributing
+
+### Icon request
+If you would like the extension to support a file format or programming language that it currently does not support, please open an issue in the [GitHub repository](https://github.com/ItsPi3141/vsc-discord-rpc/issues).
+
+If possible, please include link(s) to resources relevant to your request (e.g. programming language's homepage/documentation, service's homepage)
+
+### Detection error
+If a file type is incorrectly displayed, please [open an issue](https://github.com/ItsPi3141/vsc-discord-rpc/issues) or [create a pull request](https://github.com/ItsPi3141/vsc-discord-rpc/pulls). 
+
+## 🔗 Links
+[Source code](https://github.com/ItsPi3141/vsc-discord-rpc)
