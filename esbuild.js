@@ -50,7 +50,6 @@ async function main() {
   if (production) {
     let readme = fs.readFileSync("README.md", "utf-8");
     readme = readme.replace(/^[^]+----/, "# Discord RPC");
-    console.log(readme);
     fs.writeFileSync("README.md", readme);
   }
 }
